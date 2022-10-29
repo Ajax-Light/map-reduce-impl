@@ -1,0 +1,13 @@
+services:
+  master:
+    build: ./master
+    networks:
+      - ds-net
+  
+  slave:
+    build: ./worker
+    networks:
+      - ds-net
+
+networks:
+  ds-net: {}
