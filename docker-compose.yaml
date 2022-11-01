@@ -3,11 +3,17 @@ services:
     build: ./master
     networks:
       - ds-net
+    deploy:
+      mode: replicated
+      replicas: 1
   
   slave:
     build: ./worker
     networks:
       - ds-net
+    deploy:
+      mode: replicated
+      replicas: 4
 
 networks:
   ds-net: {}
