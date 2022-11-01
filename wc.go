@@ -2,7 +2,7 @@ package main
 
 import "os"
 import "fmt"
-import "github.com/Ajax-Light/master/master"
+import "main/master"
 import "container/list"
 import "strings"
 import "strconv"
@@ -19,7 +19,7 @@ func Map(value string) *list.List {
 
 	l := list.New()
 	for _, f := range fields {
-		kv := mapreduce.KeyValue{Key: f, Value: "1"}
+		kv := master.KeyValue{Key: f, Value: "1"}
 		l.PushBack(kv)
 	}
 	return l
